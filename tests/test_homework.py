@@ -11,7 +11,7 @@ from homework import homework
 
 def test_homework():
     """Autograding the homework."""
-    #homework.clean_campaign_data()
+    homework.clean_campaign_data()
 
     assert os.path.exists("files/output/campaign.csv")
     assert os.path.exists("files/output/client.csv")

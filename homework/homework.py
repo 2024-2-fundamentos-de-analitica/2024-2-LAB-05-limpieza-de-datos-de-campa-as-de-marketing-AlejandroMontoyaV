@@ -147,27 +147,6 @@ def clean_campaign_data():
         os.rmdir(path)
 
     open_data()
-
-clean_campaign_data()
-
-campaign = pd.read_csv("files/output/campaign.csv")
-economics = pd.read_csv("files/output/economics.csv")
-client = pd.read_csv("files/output/client.csv")
-
-a = client[client["mortgage"].map(lambda x: x == 1)].shape[0]
-b = client.groupby('mortgage').count()
-print(b)
-print(a)
-
-# for name in (
-#         "client_id,age,job,marital,education,credit_default,mortgage".split(
-#         ",")
-#     ):
-#     if name in client.columns:
-#         print('True')
-#     else:
-#         print('False')
-
 # """
 # En esta tarea se le pide que limpie los datos de una campaña de
 # marketing realizada por un banco, la cual tiene como fin la
